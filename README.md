@@ -397,16 +397,6 @@ Success rate is 100 percent (10/10)
 | `show crypto map` | Crypto Map aplicado en `Ethernet0/0` con ACL GRE. |
 
 ---
-
-### Troubleshooting Rápido
-
-| Síntoma | Causa probable | Solución |
-|---|---|---|
-| `Tunnel0` en estado `up/down` | Sin conectividad entre IPs WAN | Hacer ping de `192.168.19.5` a `192.168.19.6` para verificar alcance |
-| ISAKMP SA no sube | PSK o parámetros distintos en cada peer | Verificar `crypto isakmp policy` y `crypto isakmp key` en ambos routers |
-| GRE up pero tráfico no cifrado | ACL no hace match con protocolo GRE | Confirmar `permit gre host <src> host <dst>` con las IPs WAN correctas |
-| Pings fallan entre LANs | Ruta estática faltante | Verificar `ip route 202.50.73.x/25 Tunnel0` en cada router |
-
 ---
 
 ## 7. Capturas de Pantalla
